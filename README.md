@@ -1,3 +1,3 @@
 # todo_app
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZzXG4liQrlg?si=6Z290DGYLDSF6ST1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Video](https://img.youtube.com/vi/ZzXG4liQrlg/0.jpg)](https://www.youtube.com/watch?v=ZzXG4liQrlg)
