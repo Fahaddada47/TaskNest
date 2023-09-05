@@ -1,5 +1,5 @@
 
-## I've accidentally provide ta wrong link
+## I've accidentally provided the wrong link
 ## here is the original link for module 14 assignments 
 #https://github.com/Fahaddada47/firebase_realtime_data
 
