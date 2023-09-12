@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:todo_app/data/models/summary_count_model.dart';
+import 'package:todo_app/state_manager/delete_task_controller.dart';
+import 'package:todo_app/state_manager/login_controller.dart';
+import 'package:todo_app/state_manager/opt_verification_controller.dart';
+import 'package:todo_app/state_manager/summary_count_controller.dart';
 import 'package:todo_app/ui/screens/splash_screen.dart';
-
-
-
 
 class TaskManagerApp extends StatefulWidget {
   static GlobalKey<NavigatorState> globalKey = GlobalKey<NavigatorState>();
+
   const TaskManagerApp({Key? key}) : super(key: key);
 
   @override
@@ -15,7 +19,7 @@ class TaskManagerApp extends StatefulWidget {
 class _TaskManagerAppState extends State<TaskManagerApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       navigatorKey: TaskManagerApp.globalKey,
       title: 'Task Manager',
       theme: ThemeData(
@@ -71,8 +75,17 @@ class _TaskManagerAppState extends State<TaskManagerApp> {
         ),
       ),
       themeMode: ThemeMode.light,
+      initialBinding: ControllerBinding(),
       home: const SplashScreen(),
-
     );
+  }
+}
+
+class ControllerBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.put<LoginController>(LoginController());
+    Get.put<SummaryCountController>(SummaryCountController());
+    Get.put<DeleteTaskController>(DeleteTaskController());
   }
 }

@@ -8,7 +8,7 @@
 .pub-cache/
 .pub/
 /build/
-.fvm/                # Add this line to ignore the .fvm folder
+.dart_tool/.fvm/                # Add this line to ignore the .fvm folder
 
 # Symbolication related
 app.*.symbols
